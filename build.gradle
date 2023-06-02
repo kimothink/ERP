@@ -15,7 +15,7 @@ repositories {
 dependencies {
 
 	// JPA
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     // Thymeleaf
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	//WEB
@@ -24,8 +24,8 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
     // devTools
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    //MySql
-	//runtimeOnly 'mysql:mysql-connector-java'
+    //mariadb
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.4'
 	
 	//annotationProcessor 'org.projectlombok:lombok'
 	

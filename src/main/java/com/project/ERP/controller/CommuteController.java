@@ -9,9 +9,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/commute")
 public class CommuteController {
+	
 	@PostMapping("/in")
 	@ResponseBody
-    public String inAPI() {
+    public String InAPI() {
+	
+            return "API response";
+    }
+	
+	@PostMapping("/out")
+	@ResponseBody
+    public String OutAPI() {
             return "API response";
     }
 }

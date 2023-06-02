@@ -23,6 +23,19 @@
                     }
                 });
             });
+            
+            $('#outButton').click(function() {
+                $.ajax({
+                    type: 'POST',
+                    url: '/commute/out',
+                    success: function(response) {
+                        alert('API called successfully! Response: ' + response);
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error occurred while calling API: ' + error);
+                    }
+                });
+            });
         });
     </script>
     </body>

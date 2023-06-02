@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>INDEX</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <h2>출퇴근</h2>
+    <button id="inButton">출근</button>
+    <button id="outButton">퇴근</button>
+    <script>
+        $(document).ready(function() {
+            $('#inButton').click(function() {
+                $.ajax({
+                    type: 'POST',
+                    url: '/commute/in',
+                    success: function(response) {
+                        alert('API called successfully! Response: ' + response);
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error occurred while calling API: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
+    </body>
+</html>

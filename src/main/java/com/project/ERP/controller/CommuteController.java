@@ -1,8 +1,8 @@
 package com.project.ERP.controller;
 
-//import java.time.LocalDate;
-//import java.time.LocalDateTime;
-//import com.project.ERP.model.Commute;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import com.project.ERP.model.Commute;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,22 +16,12 @@ import com.project.EPR.repository.CommuteRepository;
 @RequestMapping("/commute")
 public class CommuteController {
 	
-//	@Autowired
-// 	CommuteRepository commuteRepository;
+	@Autowired
+ 	private CommuteRepository commuteRepository;
 	
 	@PostMapping("/in")
 	@ResponseBody
     public String InAPI() {
-		
-//		Commute commute  = new Commute();
-//        LocalDate currentDate = LocalDate.now();
-//        LocalDateTime currentDateTime = LocalDateTime.now();
-//        
-//        commute.setDate(currentDate);
-//        commute.setStartTime(currentDateTime);
-//        commute.setEndTime(null);
-//        commuteRepository.save(commute);
-        
         return "출근";
     }
 	

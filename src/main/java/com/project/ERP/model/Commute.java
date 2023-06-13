@@ -13,14 +13,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Commute")
 @Getter
 @Setter
 public class Commute {
 	
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long id;
+	 private Long index;
 	 
 	 private LocalDate date;
 

@@ -19,18 +19,13 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/commute")
 public class CommuteController {
 	
-	@Autowired
-	private CommuteRepository commuteRepository;
+	
 	
 	@PostMapping("/in")
 	@ResponseBody
     public String InAPI() {
 		
-		LocalDateTime currentTime = LocalDateTime.now();
-	     
-		Commute commute = new Commute();
-		commute.setStartTime(currentTime);
-		commuteRepository.save(commute);
+	
 		return "출근";
     }
 	

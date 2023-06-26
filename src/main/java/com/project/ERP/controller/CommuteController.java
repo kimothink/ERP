@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.EPR.repository.CommuteRepository;
+import com.project.ERP.model.Commute;
+import com.project.ERP.repository.CommuteRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -24,7 +26,12 @@ public class CommuteController {
 	@ResponseBody
     public String InAPI() {
 		
-	
+        LocalDateTime currentTime = LocalDateTime.now();
+		Commute commute = new Commute();
+		commute.setStartTime(currentTime);
+		
+		commuteRepository.save(commute);
+		
 		return "출근";
     }
 	

@@ -1,4 +1,4 @@
-package com.project.EPR.repository;
+package com.project.ERP.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
